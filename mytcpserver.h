@@ -7,6 +7,7 @@
 #include <QtNetwork>
 #include <QByteArray>
 #include <QDebug>
+#include <QList>
 
 class MyTcpServer : public QObject
 {
@@ -16,11 +17,11 @@ public:
     ~MyTcpServer();
 public slots:
     void slotNewConnection();
-    void slotClientDisconnected();
-    void slotServerRead();
+    void slotClientDisconnected(QTcpSocket* socket); // изменено
+    void slotServerRead(QTcpSocket* socket);         // изменено
 private:
     QTcpServer * mTcpServer;
-    QTcpSocket * mTcpSocket;
-    //int server_status;
+    QList<QTcpSocket*> clients;                      // добавили список клиентов
 };
+
 #endif // MYTCPSERVER_H

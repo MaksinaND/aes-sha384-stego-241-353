@@ -21,6 +21,11 @@ DatabaseManager::DatabaseManager() {
                    "aes_key TEXT, "
                    "sha_hash TEXT, "
                    "image_path TEXT)");
+        query.exec("CREATE TABLE IF NOT EXISTS users ("
+                   "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                   "login TEXT UNIQUE, "
+                   "password TEXT)");
+
     }
 }
 
