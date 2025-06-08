@@ -1,0 +1,29 @@
+\doxysection{loginwindow.\+h}
+\hypertarget{loginwindow_8h_source}{}\label{loginwindow_8h_source}\mbox{\hyperlink{loginwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mainwindow_8h}{mainwindow.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}\ \{}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_login_window}{LoginWindow}};}
+\DoxyCodeLine{00008\ \}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_login_window_aa4c04d26b299de00156bbf3c32b2a082}{LoginWindow}}\ :\ \textcolor{keyword}{public}\ QDialog\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_login_window_aa4c04d26b299de00156bbf3c32b2a082}{LoginWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_login_window_a0c49fe788dcce29aa50e7d974e1ad158}{\string~LoginWindow}}();}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_login_window_a5bfd6f65efa1666ff3d572671e43cdb3}{handleServerResponse}}(\textcolor{keyword}{const}\ QString\&\ response);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_login_window_acf66ac9ab2a1044baa92e68f7c64cea7}{onOkClicked}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_login_window}{Ui::LoginWindow}}\ *\mbox{\hyperlink{class_login_window_a583f5c7dda98acd3e65791101f9ff2a0}{ui}};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}\ *\mbox{\hyperlink{class_login_window_a3f3f54365b3dd9394cb7e9a70fe4540b}{mainWindow}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ Указатель\ на\ главное\ окно}}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

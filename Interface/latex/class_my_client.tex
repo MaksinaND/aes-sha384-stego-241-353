@@ -1,0 +1,178 @@
+\doxysection{My\+Client Class Reference}
+\hypertarget{class_my_client}{}\label{class_my_client}\index{MyClient@{MyClient}}
+
+
+Класс TCP клиента для работы в GUI приложении  
+
+
+
+
+{\ttfamily \#include $<$myclient.\+h$>$}
+
+Inheritance diagram for My\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}{response\+Received}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сигнал получения ответа от сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_client_a56743a539a6bf7516a04890b96a785bf}{connect\+To\+Server}} ()
+\item 
+void \mbox{\hyperlink{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac}{send\+Command}} (const QString \&command)
+\item 
+QTcp\+Socket \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_client_a940c4bc94d8fccff1a2a38f234caea28}{get\+Socket}} ()
+\item 
+QString \mbox{\hyperlink{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8}{get\+Last\+Response}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_my_client}{My\+Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_client_a355d2cb56cd4c8d23b5366a836fe5b9e}{on\+Connected}} ()
+\item 
+void \mbox{\hyperlink{class_my_client_a773e11907cd8be63c54321e34c04feb4}{on\+Ready\+Read}} ()
+\item 
+void \mbox{\hyperlink{class_my_client_a6a05e6d4cdc6055a08f4db8125bb5a07}{on\+Disconnected}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}{My\+Client}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QTcp\+Socket \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_client_a7ee30df5c2e5f32a59045f5f9be61400}{socket}}
+\item 
+QString \mbox{\hyperlink{class_my_client_a6f43f7927db7b1309b677145c354879f}{last\+Response}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_my_client}{My\+Client}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_my_client_aeb0decd421c263d343b7d69458aa900e}{instance}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс TCP клиента для работы в GUI приложении 
+
+Реализует\+:
+\begin{DoxyItemize}
+\item Подключение к серверу
+\item Отправку команд
+\item Чтение ответа и генерацию сигнала в интерфейс
+\item Реализацию паттерна Singleton 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}\index{MyClient@{MyClient}!MyClient@{MyClient}}
+\index{MyClient@{MyClient}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{MyClient()}{MyClient()}}
+{\footnotesize\ttfamily \label{class_my_client_af3b600b783c8b1fa05efc9e9e2030296} 
+My\+Client\+::\+My\+Client (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_client_a56743a539a6bf7516a04890b96a785bf}\index{MyClient@{MyClient}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{connectToServer()}{connectToServer()}}
+{\footnotesize\ttfamily \label{class_my_client_a56743a539a6bf7516a04890b96a785bf} 
+void My\+Client\+::connect\+To\+Server (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73}\index{MyClient@{MyClient}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73} 
+\mbox{\hyperlink{class_my_client}{My\+Client}} \texorpdfstring{$\ast$}{*} My\+Client\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8}\index{MyClient@{MyClient}!getLastResponse@{getLastResponse}}
+\index{getLastResponse@{getLastResponse}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{getLastResponse()}{getLastResponse()}}
+{\footnotesize\ttfamily \label{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8} 
+QString My\+Client\+::get\+Last\+Response (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_my_client_a940c4bc94d8fccff1a2a38f234caea28}\index{MyClient@{MyClient}!getSocket@{getSocket}}
+\index{getSocket@{getSocket}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{getSocket()}{getSocket()}}
+{\footnotesize\ttfamily \label{class_my_client_a940c4bc94d8fccff1a2a38f234caea28} 
+QTcp\+Socket \texorpdfstring{$\ast$}{*} My\+Client\+::get\+Socket (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_my_client_a355d2cb56cd4c8d23b5366a836fe5b9e}\index{MyClient@{MyClient}!onConnected@{onConnected}}
+\index{onConnected@{onConnected}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{onConnected}{onConnected}}
+{\footnotesize\ttfamily \label{class_my_client_a355d2cb56cd4c8d23b5366a836fe5b9e} 
+void My\+Client\+::on\+Connected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_my_client_a6a05e6d4cdc6055a08f4db8125bb5a07}\index{MyClient@{MyClient}!onDisconnected@{onDisconnected}}
+\index{onDisconnected@{onDisconnected}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{onDisconnected}{onDisconnected}}
+{\footnotesize\ttfamily \label{class_my_client_a6a05e6d4cdc6055a08f4db8125bb5a07} 
+void My\+Client\+::on\+Disconnected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_my_client_a773e11907cd8be63c54321e34c04feb4}\index{MyClient@{MyClient}!onReadyRead@{onReadyRead}}
+\index{onReadyRead@{onReadyRead}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{onReadyRead}{onReadyRead}}
+{\footnotesize\ttfamily \label{class_my_client_a773e11907cd8be63c54321e34c04feb4} 
+void My\+Client\+::on\+Ready\+Read (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}\index{MyClient@{MyClient}!responseReceived@{responseReceived}}
+\index{responseReceived@{responseReceived}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{responseReceived}{responseReceived}}
+{\footnotesize\ttfamily \label{class_my_client_aeae809f7c4e5772c2aa59d36f4957467} 
+void My\+Client\+::response\+Received (\begin{DoxyParamCaption}\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал получения ответа от сервера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Текст ответа от сервера \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac}\index{MyClient@{MyClient}!sendCommand@{sendCommand}}
+\index{sendCommand@{sendCommand}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{sendCommand()}{sendCommand()}}
+{\footnotesize\ttfamily \label{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac} 
+void My\+Client\+::send\+Command (\begin{DoxyParamCaption}\item[{const QString \&}]{command}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_my_client_aeb0decd421c263d343b7d69458aa900e}\index{MyClient@{MyClient}!instance@{instance}}
+\index{instance@{instance}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \label{class_my_client_aeb0decd421c263d343b7d69458aa900e} 
+\mbox{\hyperlink{class_my_client}{My\+Client}} \texorpdfstring{$\ast$}{*} My\+Client\+::instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{class_my_client_a6f43f7927db7b1309b677145c354879f}\index{MyClient@{MyClient}!lastResponse@{lastResponse}}
+\index{lastResponse@{lastResponse}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{lastResponse}{lastResponse}}
+{\footnotesize\ttfamily \label{class_my_client_a6f43f7927db7b1309b677145c354879f} 
+QString My\+Client\+::last\+Response\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_my_client_a7ee30df5c2e5f32a59045f5f9be61400}\index{MyClient@{MyClient}!socket@{socket}}
+\index{socket@{socket}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily \label{class_my_client_a7ee30df5c2e5f32a59045f5f9be61400} 
+QTcp\+Socket\texorpdfstring{$\ast$}{*} My\+Client\+::socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{myclient_8h}{myclient.\+h}}\item 
+build/\+Desktop\+\_\+\+Qt\+\_\+6\+\_\+8\+\_\+2\+\_\+\+Min\+GW\+\_\+64\+\_\+bit-\/\+Debug/debug/\mbox{\hyperlink{moc__myclient_8cpp}{moc\+\_\+myclient.\+cpp}}\item 
+\mbox{\hyperlink{myclient_8cpp}{myclient.\+cpp}}\end{DoxyCompactItemize}
