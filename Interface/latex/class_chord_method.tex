@@ -1,0 +1,179 @@
+\doxysection{Chord\+Method Class Reference}
+\hypertarget{class_chord_method}{}\label{class_chord_method}\index{ChordMethod@{ChordMethod}}
+
+
+Класс \doxylink{class_chord_method}{Chord\+Method} реализует метод хорд для поиска корней уравнений  
+
+
+
+
+{\ttfamily \#include $<$chordmethod.\+h$>$}
+
+Inheritance diagram for Chord\+Method\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_chord_method}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_chord_method_a5239e97f67ad03942fc4966ebf3495b6}{Chord\+Method}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_chord_method}{Chord\+Method}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_chord_method_a3edd96c85a1caa720197e8998f75dff0}{has\+Root}} (const std\+::function$<$ double(double)$>$ \&function, double a, double b)
+\begin{DoxyCompactList}\small\item\em Проверяет наличие корня на заданном интервале \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_chord_method_a1f9645e403e820619efa17b7519d8141}{solve}} (const std\+::function$<$ double(double)$>$ \&function, double a, double b, double epsilon=1e-\/6, int max\+Iterations=100)
+\begin{DoxyCompactList}\small\item\em Решает уравнение f(x) = 0 методом хорд \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_chord_method_abf50963a256e90b741e93a01019f1d2f}{get\+Iteration\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает количество выполненных итераций \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_chord_method_a89dfae1afc87d5ef62f48088476a858a}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\item 
+QVector$<$ QPointF $>$ \mbox{\hyperlink{class_chord_method_a5a13a2c589c4f7f07ff84953763de7fd}{calculate\+Function\+Points}} (const std\+::function$<$ double(double)$>$ \&function, double a, double b, int point\+Count=100)
+\begin{DoxyCompactList}\small\item\em Вычисляет точки функции для построения графика \end{DoxyCompactList}\item 
+QVector$<$ QPointF $>$ \mbox{\hyperlink{class_chord_method_abf23b4d1d8844f06a83aa0b5ffa39f85}{get\+Iteration\+History}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает историю итераций метода хорд \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_chord_method}{Chord\+Method} реализует метод хорд для поиска корней уравнений 
+
+\label{doc-constructors}
+\Hypertarget{class_chord_method_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_chord_method_a5239e97f67ad03942fc4966ebf3495b6}\index{ChordMethod@{ChordMethod}!ChordMethod@{ChordMethod}}
+\index{ChordMethod@{ChordMethod}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{ChordMethod()}{ChordMethod()}}
+{\footnotesize\ttfamily \label{class_chord_method_a5239e97f67ad03942fc4966ebf3495b6} 
+Chord\+Method\+::\+Chord\+Method (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_chord_method}{Chord\+Method}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_chord_method_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_chord_method_a5a13a2c589c4f7f07ff84953763de7fd}\index{ChordMethod@{ChordMethod}!calculateFunctionPoints@{calculateFunctionPoints}}
+\index{calculateFunctionPoints@{calculateFunctionPoints}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{calculateFunctionPoints()}{calculateFunctionPoints()}}
+{\footnotesize\ttfamily \label{class_chord_method_a5a13a2c589c4f7f07ff84953763de7fd} 
+QVector$<$ QPointF $>$ Chord\+Method\+::calculate\+Function\+Points (\begin{DoxyParamCaption}\item[{const std\+::function$<$ double(double)$>$ \&}]{function}{, }\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{int}]{point\+Count}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Вычисляет точки функции для построения графика 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & Функция f(x) \\
+\hline
+{\em a} & Левая граница интервала \\
+\hline
+{\em b} & Правая граница интервала \\
+\hline
+{\em point\+Count} & Количество точек \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Вектор точек (x, f(x)) 
+\end{DoxyReturn}
+\Hypertarget{class_chord_method_abf50963a256e90b741e93a01019f1d2f}\index{ChordMethod@{ChordMethod}!getIterationCount@{getIterationCount}}
+\index{getIterationCount@{getIterationCount}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{getIterationCount()}{getIterationCount()}}
+{\footnotesize\ttfamily \label{class_chord_method_abf50963a256e90b741e93a01019f1d2f} 
+int Chord\+Method\+::get\+Iteration\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает количество выполненных итераций 
+
+\begin{DoxyReturn}{Returns}
+Количество итераций 
+\end{DoxyReturn}
+\Hypertarget{class_chord_method_abf23b4d1d8844f06a83aa0b5ffa39f85}\index{ChordMethod@{ChordMethod}!getIterationHistory@{getIterationHistory}}
+\index{getIterationHistory@{getIterationHistory}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{getIterationHistory()}{getIterationHistory()}}
+{\footnotesize\ttfamily \label{class_chord_method_abf23b4d1d8844f06a83aa0b5ffa39f85} 
+QVector$<$ QPointF $>$ Chord\+Method\+::get\+Iteration\+History (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает историю итераций метода хорд 
+
+\begin{DoxyReturn}{Returns}
+Вектор точек (x, f(x)) для каждой итерации 
+\end{DoxyReturn}
+\Hypertarget{class_chord_method_a3edd96c85a1caa720197e8998f75dff0}\index{ChordMethod@{ChordMethod}!hasRoot@{hasRoot}}
+\index{hasRoot@{hasRoot}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{hasRoot()}{hasRoot()}}
+{\footnotesize\ttfamily \label{class_chord_method_a3edd96c85a1caa720197e8998f75dff0} 
+bool Chord\+Method\+::has\+Root (\begin{DoxyParamCaption}\item[{const std\+::function$<$ double(double)$>$ \&}]{function}{, }\item[{double}]{a}{, }\item[{double}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет наличие корня на заданном интервале 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & Функция f(x) \\
+\hline
+{\em a} & Левая граница интервала \\
+\hline
+{\em b} & Правая граница интервала \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если на интервале есть корень, иначе false 
+\end{DoxyReturn}
+\Hypertarget{class_chord_method_a89dfae1afc87d5ef62f48088476a858a}\index{ChordMethod@{ChordMethod}!lastError@{lastError}}
+\index{lastError@{lastError}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_chord_method_a89dfae1afc87d5ef62f48088476a858a} 
+QString Chord\+Method\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Текст ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_chord_method_a1f9645e403e820619efa17b7519d8141}\index{ChordMethod@{ChordMethod}!solve@{solve}}
+\index{solve@{solve}!ChordMethod@{ChordMethod}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \label{class_chord_method_a1f9645e403e820619efa17b7519d8141} 
+double Chord\+Method\+::solve (\begin{DoxyParamCaption}\item[{const std\+::function$<$ double(double)$>$ \&}]{function}{, }\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{epsilon}{ = {\ttfamily 1e-\/6}, }\item[{int}]{max\+Iterations}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Решает уравнение f(x) = 0 методом хорд 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & Функция f(x) \\
+\hline
+{\em a} & Левая граница интервала \\
+\hline
+{\em b} & Правая граница интервала \\
+\hline
+{\em epsilon} & Точность вычислений \\
+\hline
+{\em max\+Iterations} & Максимальное количество итераций \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Найденный корень уравнения 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+chordmethod.\+h\item 
+chordmethod.\+cpp\end{DoxyCompactItemize}

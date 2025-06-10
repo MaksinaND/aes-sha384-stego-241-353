@@ -1,0 +1,103 @@
+\doxysection{mainwindow\+\_\+tabs.\+h}
+\hypertarget{mainwindow__tabs_8h_source}{}\label{mainwindow__tabs_8h_source}\mbox{\hyperlink{mainwindow__tabs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QFileDialog>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QImage>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QPixmap>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QBuffer>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QTabWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QPointF>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{steganography_8h}{steganography.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}chordmethod.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}aescipher.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}sha384hasher.h"{}}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }MainWindow;\ \}}
+\DoxyCodeLine{00026\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00032\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{//\ Слоты\ для\ вкладки\ "{}Стеганография"{}}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ onEmbedMessageClicked();}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ onExtractMessageClicked();}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ onSelectImageForEmbedClicked();}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ onSelectImageForExtractClicked();}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ onSaveImageClicked();}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ onTabChanged(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{comment}{//\ Слоты\ для\ вкладки\ "{}Метод\ хорд"{}}}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ onSolveClicked();}
+\DoxyCodeLine{00085\ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ onClearChordClicked();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//\ Слоты\ для\ вкладки\ "{}AES"{}}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ onEncryptClicked();}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ onDecryptClicked();}
+\DoxyCodeLine{00101\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ onClearAESClicked();}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ onCopyAESResultClicked();}
+\DoxyCodeLine{00111\ \ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ onKeySizeChanged(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{comment}{//\ Слоты\ для\ вкладки\ "{}SHA-\/384"{}}}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ onCalculateHashClicked();}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ onClearSHA384Clicked();}
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ onCopyHashClicked();}
+\DoxyCodeLine{00133\ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ onSelectFileClicked();}
+\DoxyCodeLine{00138\ \ \ \ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ onCalculateFileHashClicked();}
+\DoxyCodeLine{00143\ \ \ \ \ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ onVerifyHashClicked();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00149\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{void}\ displayImage(\textcolor{keyword}{const}\ QImage\ \&image);}
+\DoxyCodeLine{00155\ \ \ \ \ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ appendToOutput(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00161\ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{void}\ appendToChordOutput(\textcolor{keyword}{const}\ QString\ \&message);}
+\DoxyCodeLine{00167\ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ std::function<double(\textcolor{keywordtype}{double})>\ getFunction(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00174\ \ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{void}\ displayPlot(\textcolor{keyword}{const}\ QVector<QPointF>\&\ points,\ \textcolor{keywordtype}{double}\ root);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00183\ \ \ \ \ Ui::MainWindow\ *ui;\ }
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{class_steganography}{Steganography}}\ *m\_steganography;\ }
+\DoxyCodeLine{00185\ \ \ \ \ \mbox{\hyperlink{class_chord_method}{ChordMethod}}\ *m\_chordMethod;\ }
+\DoxyCodeLine{00186\ \ \ \ \ \mbox{\hyperlink{class_a_e_s_cipher}{AESCipher}}\ *m\_aesCipher;\ }
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{class_s_h_a384_hasher}{SHA384Hasher}}\ *m\_sha384Hasher;\ }
+\DoxyCodeLine{00188\ \ \ \ \ QImage\ m\_originalImage;\ }
+\DoxyCodeLine{00189\ \ \ \ \ QImage\ m\_stegoImage;\ }
+\DoxyCodeLine{00190\ \ \ \ \ QString\ m\_lastImagePath;\ }
+\DoxyCodeLine{00191\ \ \ \ \ QString\ m\_selectedFilePath;\ }
+\DoxyCodeLine{00192\ \};}
+\DoxyCodeLine{00193\ }
+
+\end{DoxyCode}

@@ -1,0 +1,54 @@
+# ---------------------------
+# Doxygen файл для клиента (Qt GUI приложение)
+# ---------------------------
+
+# Название проекта
+PROJECT_NAME           = "EchoClient"
+
+# Папка для выходных файлов
+OUTPUT_DIRECTORY       = docs_client
+
+# Папка где лежат исходники
+INPUT                  = C:\Users\LopMob\Documents\aes-sha384-stego-241-353-feature-server
+
+# Сканировать подпапки
+RECURSIVE              = YES
+
+# Какие файлы обрабатывать
+FILE_PATTERNS          = *.h *.cpp
+
+# Вытаскивать ВСЁ (даже если нет комментариев)
+EXTRACT_ALL            = YES
+
+# Показывать private методы и поля
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+# Генерация HTML
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# Не генерировать PDF (LaTeX)
+GENERATE_LATEX         = NO
+
+# Включить дерево проекта слева
+GENERATE_TREEVIEW      = YES
+
+# Включить графики зависимостей и диаграммы классов
+HAVE_DOT               = YES
+DOT_IMAGE_FORMAT       = svg
+CLASS_DIAGRAMS         = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+# Оформление
+QUIET                  = NO
+FULL_PATH_NAMES        = NO
+OUTPUT_LANGUAGE        = Russian
+
+# Предупреждать если нет комментариев
+WARN_IF_UNDOCUMENTED   = YES
+
+# Разрешить форматирование в комментариях Markdown
+MARKDOWN_SUPPORT       = YES

@@ -1,0 +1,170 @@
+\doxysection{SHA384 Class Reference}
+\hypertarget{class_s_h_a384}{}\label{class_s_h_a384}\index{SHA384@{SHA384}}
+
+
+Класс \doxylink{class_s_h_a384}{SHA384} реализует алгоритм хеширования SHA-\/384.  
+
+
+
+
+{\ttfamily \#include $<$sha384.\+h$>$}
+
+Inheritance diagram for SHA384\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_h_a384}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_h_a384_aef04807d59d233b9bd1c495a4b049539}{SHA384}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_s_h_a384}{SHA384}. \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_s_h_a384_a656e5027d52bc258f6ad4910787e3f77}{hash}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для заданных данных \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_h_a384_aba83bf3800dd380ccdbb4ab93a3f099b}{hash}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для заданных данных \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_h_a384_a406a4f338ee0ef9db5e50d12878e42cf}{update}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Обновляет контекст хеширования новыми данными \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_h_a384_a8db55d7e1d2b78f8a161447f81c5de5d}{finalize}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Завершает процесс хеширования и возвращает результат \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_aa04dde23008d5f01dc0d9aef91afc498}{hash\+To\+Hex}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для заданных данных и возвращает его в виде шестнадцатеричной строки \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_ac8ef23cbbe636e93364e551a0447074a}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_s_h_a384}{SHA384} реализует алгоритм хеширования SHA-\/384. 
+
+SHA-\/384 -\/ это хеш-\/функция из семейства SHA-\/2, которая генерирует 384-\/битный хеш. Она основана на SHA-\/512, но использует другие начальные значения и усекает выходной хеш до 384 бит. 
+
+\label{doc-constructors}
+\Hypertarget{class_s_h_a384_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_h_a384_aef04807d59d233b9bd1c495a4b049539}\index{SHA384@{SHA384}!SHA384@{SHA384}}
+\index{SHA384@{SHA384}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{SHA384()}{SHA384()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_aef04807d59d233b9bd1c495a4b049539} 
+SHA384\+::\+SHA384 (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_s_h_a384}{SHA384}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_s_h_a384_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_h_a384_a8db55d7e1d2b78f8a161447f81c5de5d}\index{SHA384@{SHA384}!finalize@{finalize}}
+\index{finalize@{finalize}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_a8db55d7e1d2b78f8a161447f81c5de5d} 
+void SHA384\+::finalize (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Завершает процесс хеширования и возвращает результат 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Указатель на массив для записи результата (должен быть не менее 48 байт) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_h_a384_a656e5027d52bc258f6ad4910787e3f77}\index{SHA384@{SHA384}!hash@{hash}}
+\index{hash@{hash}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_s_h_a384_a656e5027d52bc258f6ad4910787e3f77} 
+QByte\+Array SHA384\+::hash (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для заданных данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в виде массива байтов 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_aba83bf3800dd380ccdbb4ab93a3f099b}\index{SHA384@{SHA384}!hash@{hash}}
+\index{hash@{hash}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_s_h_a384_aba83bf3800dd380ccdbb4ab93a3f099b} 
+void SHA384\+::hash (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для заданных данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Указатель на данные для хеширования \\
+\hline
+{\em length} & Длина данных в байтах \\
+\hline
+{\em output} & Указатель на массив для записи результата (должен быть не менее 48 байт) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_s_h_a384_aa04dde23008d5f01dc0d9aef91afc498}\index{SHA384@{SHA384}!hashToHex@{hashToHex}}
+\index{hashToHex@{hashToHex}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{hashToHex()}{hashToHex()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_aa04dde23008d5f01dc0d9aef91afc498} 
+QString SHA384\+::hash\+To\+Hex (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для заданных данных и возвращает его в виде шестнадцатеричной строки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в виде шестнадцатеричной строки 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_ac8ef23cbbe636e93364e551a0447074a}\index{SHA384@{SHA384}!lastError@{lastError}}
+\index{lastError@{lastError}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_ac8ef23cbbe636e93364e551a0447074a} 
+QString SHA384\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Текст ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_a406a4f338ee0ef9db5e50d12878e42cf}\index{SHA384@{SHA384}!update@{update}}
+\index{update@{update}!SHA384@{SHA384}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_a406a4f338ee0ef9db5e50d12878e42cf} 
+void SHA384\+::update (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{size\+\_\+t}]{length}{}\end{DoxyParamCaption})}
+
+
+
+Обновляет контекст хеширования новыми данными 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Указатель на данные для хеширования \\
+\hline
+{\em length} & Длина данных в байтах \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sha384.\+h\item 
+sha384.\+cpp\end{DoxyCompactItemize}

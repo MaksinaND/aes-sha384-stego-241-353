@@ -1,0 +1,68 @@
+\doxysection{Database\+Manager Class Reference}
+\hypertarget{class_database_manager}{}\label{class_database_manager}\index{DatabaseManager@{DatabaseManager}}
+
+
+Класс для управления соединением с SQLite базой данных  
+
+
+
+
+{\ttfamily \#include $<$databasemanager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QSql\+Database \mbox{\hyperlink{class_database_manager_a4c1124bbf21d49013912fedac7407ce8}{get\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Получить объект базы данных \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_database_manager}{Database\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_database_manager_adc77584b498f23cb33c9fc2d0422a73f}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Получить экземпляр класса \doxylink{class_database_manager}{Database\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для управления соединением с SQLite базой данных 
+
+Реализует\+:
+\begin{DoxyItemize}
+\item Открытие базы данных
+\item Создание таблиц, если они отсутствуют
+\item Паттерн Singleton для управления одним соединением 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_database_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_database_manager_a4c1124bbf21d49013912fedac7407ce8}\index{DatabaseManager@{DatabaseManager}!getDatabase@{getDatabase}}
+\index{getDatabase@{getDatabase}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getDatabase()}{getDatabase()}}
+{\footnotesize\ttfamily \label{class_database_manager_a4c1124bbf21d49013912fedac7407ce8} 
+QSql\+Database Database\+Manager\+::get\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Получить объект базы данных 
+
+\begin{DoxyReturn}{Returns}
+Объект QSql\+Database 
+\end{DoxyReturn}
+\Hypertarget{class_database_manager_adc77584b498f23cb33c9fc2d0422a73f}\index{DatabaseManager@{DatabaseManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_database_manager_adc77584b498f23cb33c9fc2d0422a73f} 
+\mbox{\hyperlink{class_database_manager}{Database\+Manager}} \texorpdfstring{$\ast$}{*} Database\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Получить экземпляр класса \doxylink{class_database_manager}{Database\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+Указатель на экземпляр \doxylink{class_database_manager}{Database\+Manager} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{databasemanager_8h}{databasemanager.\+h}}\item 
+\mbox{\hyperlink{databasemanager_8cpp}{databasemanager.\+cpp}}\end{DoxyCompactItemize}

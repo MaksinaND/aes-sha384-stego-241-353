@@ -1,0 +1,317 @@
+\doxysection{SHA384\+Hasher Class Reference}
+\hypertarget{class_s_h_a384_hasher}{}\label{class_s_h_a384_hasher}\index{SHA384Hasher@{SHA384Hasher}}
+
+
+Класс \doxylink{class_s_h_a384_hasher}{SHA384\+Hasher} предоставляет удобный интерфейс для работы с SHA-\/384 хешированием  
+
+
+
+
+{\ttfamily \#include $<$sha384hasher.\+h$>$}
+
+Inheritance diagram for SHA384\+Hasher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_h_a384_hasher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_h_a384_hasher_a48562d430847a258dad141bcbd80c1bd}{SHA384\+Hasher}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_s_h_a384_hasher}{SHA384\+Hasher}. \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_s_h_a384_hasher_a7fe73329efa5c239327ee75a2661bd57}{hash}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для заданных данных \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_s_h_a384_hasher_a4b8af9de39e9baa73927d8f79b954abc}{hash\+Text}} (const QString \&text)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для текста \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_s_h_a384_hasher_a258c50a78d293a061c7b0f50d59982a2}{hash\+File}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для файла \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_aae0826b1702685a0ee751301fa8b37fd}{hash\+To\+Hex}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для данных и возвращает его в шестнадцатеричном формате \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_a88095db0c9370307a5206685c94f44cb}{hash\+Text\+To\+Hex}} (const QString \&text)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для текста и возвращает его в шестнадцатеричном формате \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_ac6befa7cd433bca9951ea327b1c944cc}{hash\+File\+To\+Hex}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для файла и возвращает его в шестнадцатеричном формате \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_aeba195fa4cc7be0cc289071dda0819f0}{hash\+To\+Base64}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для данных и возвращает его в формате Base64. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_a38655cbdd769844531970359d3dfa89c}{hash\+Text\+To\+Base64}} (const QString \&text)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для текста и возвращает его в формате Base64. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_a3d9dc47296d157f2a9ac388ee9d0e9a9}{hash\+File\+To\+Base64}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Вычисляет хеш SHA-\/384 для файла и возвращает его в формате Base64. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_h_a384_hasher_a84a8dbe70449a66e3238b24e0a5707bb}{verify}} (const QByte\+Array \&data, const QByte\+Array \&expected\+Hash)
+\begin{DoxyCompactList}\small\item\em Проверяет, соответствует ли хеш SHA-\/384 заданным данным \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_h_a384_hasher_aa355e48412155c78bb9591872a26262b}{verify\+Text}} (const QString \&text, const QString \&expected\+Hash)
+\begin{DoxyCompactList}\small\item\em Проверяет, соответствует ли хеш SHA-\/384 заданному тексту \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_s_h_a384_hasher_a244e74329c607faf77343b747ed4348d}{verify\+File}} (const QString \&file\+Path, const QString \&expected\+Hash)
+\begin{DoxyCompactList}\small\item\em Проверяет, соответствует ли хеш SHA-\/384 заданному файлу \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_s_h_a384_hasher_af44903709eeea48a6827fcc70026ad6d}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_s_h_a384_hasher}{SHA384\+Hasher} предоставляет удобный интерфейс для работы с SHA-\/384 хешированием 
+
+\label{doc-constructors}
+\Hypertarget{class_s_h_a384_hasher_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_h_a384_hasher_a48562d430847a258dad141bcbd80c1bd}\index{SHA384Hasher@{SHA384Hasher}!SHA384Hasher@{SHA384Hasher}}
+\index{SHA384Hasher@{SHA384Hasher}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{SHA384Hasher()}{SHA384Hasher()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a48562d430847a258dad141bcbd80c1bd} 
+SHA384\+Hasher\+::\+SHA384\+Hasher (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_s_h_a384_hasher}{SHA384\+Hasher}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_s_h_a384_hasher_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_h_a384_hasher_a7fe73329efa5c239327ee75a2661bd57}\index{SHA384Hasher@{SHA384Hasher}!hash@{hash}}
+\index{hash@{hash}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hash()}{hash()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a7fe73329efa5c239327ee75a2661bd57} 
+QByte\+Array SHA384\+Hasher\+::hash (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для заданных данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в виде массива байт 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a258c50a78d293a061c7b0f50d59982a2}\index{SHA384Hasher@{SHA384Hasher}!hashFile@{hashFile}}
+\index{hashFile@{hashFile}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashFile()}{hashFile()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a258c50a78d293a061c7b0f50d59982a2} 
+QByte\+Array SHA384\+Hasher\+::hash\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для файла 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в виде массива байт 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a3d9dc47296d157f2a9ac388ee9d0e9a9}\index{SHA384Hasher@{SHA384Hasher}!hashFileToBase64@{hashFileToBase64}}
+\index{hashFileToBase64@{hashFileToBase64}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashFileToBase64()}{hashFileToBase64()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a3d9dc47296d157f2a9ac388ee9d0e9a9} 
+QString SHA384\+Hasher\+::hash\+File\+To\+Base64 (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для файла и возвращает его в формате Base64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в формате Base64 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_ac6befa7cd433bca9951ea327b1c944cc}\index{SHA384Hasher@{SHA384Hasher}!hashFileToHex@{hashFileToHex}}
+\index{hashFileToHex@{hashFileToHex}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashFileToHex()}{hashFileToHex()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_ac6befa7cd433bca9951ea327b1c944cc} 
+QString SHA384\+Hasher\+::hash\+File\+To\+Hex (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для файла и возвращает его в шестнадцатеричном формате 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в шестнадцатеричном формате 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a4b8af9de39e9baa73927d8f79b954abc}\index{SHA384Hasher@{SHA384Hasher}!hashText@{hashText}}
+\index{hashText@{hashText}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashText()}{hashText()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a4b8af9de39e9baa73927d8f79b954abc} 
+QByte\+Array SHA384\+Hasher\+::hash\+Text (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для текста 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в виде массива байт 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a38655cbdd769844531970359d3dfa89c}\index{SHA384Hasher@{SHA384Hasher}!hashTextToBase64@{hashTextToBase64}}
+\index{hashTextToBase64@{hashTextToBase64}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashTextToBase64()}{hashTextToBase64()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a38655cbdd769844531970359d3dfa89c} 
+QString SHA384\+Hasher\+::hash\+Text\+To\+Base64 (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для текста и возвращает его в формате Base64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в формате Base64 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a88095db0c9370307a5206685c94f44cb}\index{SHA384Hasher@{SHA384Hasher}!hashTextToHex@{hashTextToHex}}
+\index{hashTextToHex@{hashTextToHex}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashTextToHex()}{hashTextToHex()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a88095db0c9370307a5206685c94f44cb} 
+QString SHA384\+Hasher\+::hash\+Text\+To\+Hex (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для текста и возвращает его в шестнадцатеричном формате 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в шестнадцатеричном формате 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_aeba195fa4cc7be0cc289071dda0819f0}\index{SHA384Hasher@{SHA384Hasher}!hashToBase64@{hashToBase64}}
+\index{hashToBase64@{hashToBase64}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashToBase64()}{hashToBase64()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_aeba195fa4cc7be0cc289071dda0819f0} 
+QString SHA384\+Hasher\+::hash\+To\+Base64 (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для данных и возвращает его в формате Base64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в формате Base64 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_aae0826b1702685a0ee751301fa8b37fd}\index{SHA384Hasher@{SHA384Hasher}!hashToHex@{hashToHex}}
+\index{hashToHex@{hashToHex}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{hashToHex()}{hashToHex()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_aae0826b1702685a0ee751301fa8b37fd} 
+QString SHA384\+Hasher\+::hash\+To\+Hex (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Вычисляет хеш SHA-\/384 для данных и возвращает его в шестнадцатеричном формате 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для хеширования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Хеш SHA-\/384 в шестнадцатеричном формате 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_af44903709eeea48a6827fcc70026ad6d}\index{SHA384Hasher@{SHA384Hasher}!lastError@{lastError}}
+\index{lastError@{lastError}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_af44903709eeea48a6827fcc70026ad6d} 
+QString SHA384\+Hasher\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Текст ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a84a8dbe70449a66e3238b24e0a5707bb}\index{SHA384Hasher@{SHA384Hasher}!verify@{verify}}
+\index{verify@{verify}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a84a8dbe70449a66e3238b24e0a5707bb} 
+bool SHA384\+Hasher\+::verify (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{, }\item[{const QByte\+Array \&}]{expected\+Hash}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, соответствует ли хеш SHA-\/384 заданным данным 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для проверки \\
+\hline
+{\em expected\+Hash} & Ожидаемый хеш в виде массива байт \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если хеш соответствует данным, иначе false 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_a244e74329c607faf77343b747ed4348d}\index{SHA384Hasher@{SHA384Hasher}!verifyFile@{verifyFile}}
+\index{verifyFile@{verifyFile}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{verifyFile()}{verifyFile()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_a244e74329c607faf77343b747ed4348d} 
+bool SHA384\+Hasher\+::verify\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{, }\item[{const QString \&}]{expected\+Hash}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, соответствует ли хеш SHA-\/384 заданному файлу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+{\em expected\+Hash} & Ожидаемый хеш в шестнадцатеричном формате \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если хеш соответствует файлу, иначе false 
+\end{DoxyReturn}
+\Hypertarget{class_s_h_a384_hasher_aa355e48412155c78bb9591872a26262b}\index{SHA384Hasher@{SHA384Hasher}!verifyText@{verifyText}}
+\index{verifyText@{verifyText}!SHA384Hasher@{SHA384Hasher}}
+\doxysubsubsection{\texorpdfstring{verifyText()}{verifyText()}}
+{\footnotesize\ttfamily \label{class_s_h_a384_hasher_aa355e48412155c78bb9591872a26262b} 
+bool SHA384\+Hasher\+::verify\+Text (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{, }\item[{const QString \&}]{expected\+Hash}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, соответствует ли хеш SHA-\/384 заданному тексту 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для проверки \\
+\hline
+{\em expected\+Hash} & Ожидаемый хеш в шестнадцатеричном формате \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если хеш соответствует тексту, иначе false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sha384hasher.\+h\item 
+sha384hasher.\+cpp\end{DoxyCompactItemize}

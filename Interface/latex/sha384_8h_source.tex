@@ -1,0 +1,77 @@
+\doxysection{sha384.\+h}
+\hypertarget{sha384_8h_source}{}\label{sha384_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SHA384\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SHA384\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QByteArray>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_h_a384_aef04807d59d233b9bd1c495a4b049539}{SHA384}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_s_h_a384_aef04807d59d233b9bd1c495a4b049539}{SHA384}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ QByteArray\ \mbox{\hyperlink{class_s_h_a384_a656e5027d52bc258f6ad4910787e3f77}{hash}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_h_a384_a656e5027d52bc258f6ad4910787e3f77}{hash}}(\textcolor{keyword}{const}\ uint8\_t*\ data,\ \textcolor{keywordtype}{size\_t}\ length,\ uint8\_t*\ output);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_h_a384_a406a4f338ee0ef9db5e50d12878e42cf}{update}}(\textcolor{keyword}{const}\ uint8\_t*\ data,\ \textcolor{keywordtype}{size\_t}\ length);}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_h_a384_a8db55d7e1d2b78f8a161447f81c5de5d}{finalize}}(uint8\_t*\ output);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_aa04dde23008d5f01dc0d9aef91afc498}{hashToHex}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_ac8ef23cbbe636e93364e551a0447074a}{lastError}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{//\ Константы}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ BLOCK\_SIZE\ =\ 128;\ \textcolor{comment}{//\ 1024\ бит}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ HASH\_SIZE\ =\ 48;\ \ \ \textcolor{comment}{//\ 384\ бит}}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Начальные\ значения\ хеша\ (H0-\/H7)}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ quint64\ H0[8];}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{comment}{//\ Константы\ раунда\ (K0-\/K79)}}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ quint64\ K[80];}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{//\ Состояние\ хеша}}
+\DoxyCodeLine{00079\ \ \ \ \ quint64\ state[8];}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{//\ Счетчик\ обработанных\ бит}}
+\DoxyCodeLine{00082\ \ \ \ \ quint64\ bitCount;}
+\DoxyCodeLine{00083\ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{//\ Буфер\ для\ накопления\ данных}}
+\DoxyCodeLine{00085\ \ \ \ \ QByteArray\ buffer;}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ QString\ m\_lastError;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{comment}{//\ Вспомогательные\ функции}}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ initialize();}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ processBlock(\textcolor{keyword}{const}\ quint8\ *block);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_h_a384_a8db55d7e1d2b78f8a161447f81c5de5d}{finalize}}();}
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{comment}{//\ Функции\ для\ работы\ с\ 64-\/битными\ словами}}
+\DoxyCodeLine{00095\ \ \ \ \ quint64\ ch(quint64\ x,\ quint64\ y,\ quint64\ z);}
+\DoxyCodeLine{00096\ \ \ \ \ quint64\ maj(quint64\ x,\ quint64\ y,\ quint64\ z);}
+\DoxyCodeLine{00097\ \ \ \ \ quint64\ sigma0(quint64\ x);}
+\DoxyCodeLine{00098\ \ \ \ \ quint64\ sigma1(quint64\ x);}
+\DoxyCodeLine{00099\ \ \ \ \ quint64\ gamma0(quint64\ x);}
+\DoxyCodeLine{00100\ \ \ \ \ quint64\ gamma1(quint64\ x);}
+\DoxyCodeLine{00101\ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{comment}{//\ Функции\ для\ преобразования\ данных}}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ bytesToWords(\textcolor{keyword}{const}\ quint8\ *bytes,\ quint64\ *words,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{void}\ wordsToBytes(\textcolor{keyword}{const}\ quint64\ *words,\ quint8\ *bytes,\ \textcolor{keywordtype}{int}\ size);}
+\DoxyCodeLine{00105\ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{comment}{//\ Функции\ для\ работы\ с\ блоками}}
+\DoxyCodeLine{00107\ \ \ \ \ QByteArray\ padData(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00108\ \};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SHA384\_H}}
+\DoxyCodeLine{00111\ }
+
+\end{DoxyCode}

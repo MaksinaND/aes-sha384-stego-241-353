@@ -1,0 +1,122 @@
+\doxysection{steganography\+\_\+test.\+cpp File Reference}
+\hypertarget{steganography__test_8cpp}{}\label{steganography__test_8cpp}\index{steganography\_test.cpp@{steganography\_test.cpp}}
+
+
+Тестирование функций класса \doxylink{class_steganography}{Steganography}.  
+
+
+{\ttfamily \#include $<$QCore\+Application$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include $<$QImage$>$}\newline
+{\ttfamily \#include $<$QDir$>$}\newline
+{\ttfamily \#include $<$QFile\+Info$>$}\newline
+{\ttfamily \#include $<$QDate\+Time$>$}\newline
+{\ttfamily \#include "{}steganography.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{steganography__test_8cpp_abd8ca2276dffed1a34caf1afec311217}{test\+Embed\+And\+Extract}} (const QString \&image\+Path, const QString \&message, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Функция для тестирования внедрения и извлечения сообщения \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{steganography__test_8cpp_a900f3879dc6bba6ebc04777fff6463e2}{test\+Wrong\+Password}} (const QString \&image\+Path, const QString \&correct\+Password, const QString \&wrong\+Password)
+\begin{DoxyCompactList}\small\item\em Функция для тестирования извлечения сообщения с неверным паролем \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{steganography__test_8cpp_a3114294f62e23350ec40949c93eb0566}{test\+Max\+Message\+Size}} (const QString \&image\+Path, const QString \&password)
+\begin{DoxyCompactList}\small\item\em Функция для тестирования максимального размера сообщения \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{steganography__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Главная функция для запуска тестов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Тестирование функций класса \doxylink{class_steganography}{Steganography}. 
+
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{steganography__test_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{steganography__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{steganography\_test.cpp@{steganography\_test.cpp}!main@{main}}
+\index{main@{main}!steganography\_test.cpp@{steganography\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{steganography__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Главная функция для запуска тестов 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Количество аргументов командной строки \\
+\hline
+{\em argv} & Аргументы командной строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Код завершения программы 
+\end{DoxyReturn}
+\Hypertarget{steganography__test_8cpp_abd8ca2276dffed1a34caf1afec311217}\index{steganography\_test.cpp@{steganography\_test.cpp}!testEmbedAndExtract@{testEmbedAndExtract}}
+\index{testEmbedAndExtract@{testEmbedAndExtract}!steganography\_test.cpp@{steganography\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{testEmbedAndExtract()}{testEmbedAndExtract()}}
+{\footnotesize\ttfamily \label{steganography__test_8cpp_abd8ca2276dffed1a34caf1afec311217} 
+bool test\+Embed\+And\+Extract (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path}{, }\item[{const QString \&}]{message}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Функция для тестирования внедрения и извлечения сообщения 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & Путь к тестовому изображению \\
+\hline
+{\em message} & Сообщение для внедрения \\
+\hline
+{\em password} & Пароль для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если тест пройден успешно, иначе false 
+\end{DoxyReturn}
+\Hypertarget{steganography__test_8cpp_a3114294f62e23350ec40949c93eb0566}\index{steganography\_test.cpp@{steganography\_test.cpp}!testMaxMessageSize@{testMaxMessageSize}}
+\index{testMaxMessageSize@{testMaxMessageSize}!steganography\_test.cpp@{steganography\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{testMaxMessageSize()}{testMaxMessageSize()}}
+{\footnotesize\ttfamily \label{steganography__test_8cpp_a3114294f62e23350ec40949c93eb0566} 
+bool test\+Max\+Message\+Size (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path}{, }\item[{const QString \&}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Функция для тестирования максимального размера сообщения 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & Путь к тестовому изображению \\
+\hline
+{\em password} & Пароль для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если тест пройден успешно, иначе false 
+\end{DoxyReturn}
+\Hypertarget{steganography__test_8cpp_a900f3879dc6bba6ebc04777fff6463e2}\index{steganography\_test.cpp@{steganography\_test.cpp}!testWrongPassword@{testWrongPassword}}
+\index{testWrongPassword@{testWrongPassword}!steganography\_test.cpp@{steganography\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{testWrongPassword()}{testWrongPassword()}}
+{\footnotesize\ttfamily \label{steganography__test_8cpp_a900f3879dc6bba6ebc04777fff6463e2} 
+bool test\+Wrong\+Password (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path}{, }\item[{const QString \&}]{correct\+Password}{, }\item[{const QString \&}]{wrong\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Функция для тестирования извлечения сообщения с неверным паролем 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & Путь к изображению с внедренным сообщением \\
+\hline
+{\em correct\+Password} & Правильный пароль \\
+\hline
+{\em wrong\+Password} & Неверный пароль \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если тест пройден успешно, иначе false 
+\end{DoxyReturn}

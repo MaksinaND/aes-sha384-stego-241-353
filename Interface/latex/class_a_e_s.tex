@@ -1,0 +1,195 @@
+\doxysection{AES Class Reference}
+\hypertarget{class_a_e_s}{}\label{class_a_e_s}\index{AES@{AES}}
+
+
+Класс \doxylink{class_a_e_s}{AES} реализует алгоритм шифрования Advanced Encryption Standard.  
+
+
+
+
+{\ttfamily \#include $<$aes.\+h$>$}
+
+Inheritance diagram for AES\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_e_s}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_e_s_af7587d6578c5bdb085152e545f25f4bb}{AES}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_a_e_s}{AES}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_e_s_a31fa73727cc069bd6e6e069de1040d62}{set\+Key}} (const QByte\+Array \&key)
+\begin{DoxyCompactList}\small\item\em Устанавливает ключ шифрования \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_e_s_a31f6359b97825fb87cfa405edd77bb50}{set\+Key}} (const char \texorpdfstring{$\ast$}{*}key, int key\+Size)
+\begin{DoxyCompactList}\small\item\em Устанавливает ключ шифрования \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_a_e_s_a740222bd07b04e66bbb51a3859bd71c8}{encrypt}} (const QByte\+Array \&plaintext)
+\begin{DoxyCompactList}\small\item\em Шифрует данные \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_e_s_a9354b555ede95fb2457a1bd62711debd}{encrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}input, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Шифрует блок данных \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_a_e_s_a1dac912cd900fc333d7ff84458eef399}{decrypt}} (const QByte\+Array \&ciphertext)
+\begin{DoxyCompactList}\small\item\em Дешифрует данные \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_e_s_aeabe19824ff522f3194579895405e173}{decrypt}} (const uint8\+\_\+t \texorpdfstring{$\ast$}{*}input, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Дешифрует блок данных \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_a2b5669c6587327e243ba277c700a14ae}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_a_e_s}{AES} реализует алгоритм шифрования Advanced Encryption Standard. 
+
+Эта реализация поддерживает ключи длиной 128, 192 и 256 бит. Режим работы -\/ ECB (Electronic Codebook). 
+
+\label{doc-constructors}
+\Hypertarget{class_a_e_s_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_e_s_af7587d6578c5bdb085152e545f25f4bb}\index{AES@{AES}!AES@{AES}}
+\index{AES@{AES}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{AES()}{AES()}}
+{\footnotesize\ttfamily \label{class_a_e_s_af7587d6578c5bdb085152e545f25f4bb} 
+AES\+::\+AES (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_a_e_s}{AES}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_a_e_s_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_e_s_a1dac912cd900fc333d7ff84458eef399}\index{AES@{AES}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_a1dac912cd900fc333d7ff84458eef399} 
+QByte\+Array AES\+::decrypt (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{ciphertext}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует данные 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ciphertext} & Зашифрованный текст \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Открытый текст 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_aeabe19824ff522f3194579895405e173}\index{AES@{AES}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_aeabe19824ff522f3194579895405e173} 
+void AES\+::decrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{input}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует блок данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Указатель на входные данные (размер блока 16 байт) \\
+\hline
+{\em output} & Указатель на выходные данные (размер блока 16 байт) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_e_s_a740222bd07b04e66bbb51a3859bd71c8}\index{AES@{AES}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_a740222bd07b04e66bbb51a3859bd71c8} 
+QByte\+Array AES\+::encrypt (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{plaintext}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует данные 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plaintext} & Открытый текст \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный текст 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_a9354b555ede95fb2457a1bd62711debd}\index{AES@{AES}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_a9354b555ede95fb2457a1bd62711debd} 
+void AES\+::encrypt (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{input}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует блок данных 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Указатель на входные данные (размер блока 16 байт) \\
+\hline
+{\em output} & Указатель на выходные данные (размер блока 16 байт) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_a_e_s_a2b5669c6587327e243ba277c700a14ae}\index{AES@{AES}!lastError@{lastError}}
+\index{lastError@{lastError}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_a_e_s_a2b5669c6587327e243ba277c700a14ae} 
+QString AES\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Текст ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_a31f6359b97825fb87cfa405edd77bb50}\index{AES@{AES}!setKey@{setKey}}
+\index{setKey@{setKey}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_a31f6359b97825fb87cfa405edd77bb50} 
+bool AES\+::set\+Key (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{key}{, }\item[{int}]{key\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает ключ шифрования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Указатель на ключ шифрования \\
+\hline
+{\em key\+Size} & Размер ключа в битах (128, 192 или 256) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если ключ установлен успешно, иначе false 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_a31fa73727cc069bd6e6e069de1040d62}\index{AES@{AES}!setKey@{setKey}}
+\index{setKey@{setKey}!AES@{AES}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_a_e_s_a31fa73727cc069bd6e6e069de1040d62} 
+bool AES\+::set\+Key (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{key}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает ключ шифрования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ шифрования (должен быть 16, 24 или 32 байта) \\
+\hline
+{\em key\+Size} & Размер ключа в битах (128, 192 или 256) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если ключ установлен успешно, иначе false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aes.\+h\item 
+aes.\+cpp\end{DoxyCompactItemize}

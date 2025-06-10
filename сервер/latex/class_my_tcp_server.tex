@@ -1,0 +1,106 @@
+\doxysection{My\+Tcp\+Server Class Reference}
+\hypertarget{class_my_tcp_server}{}\label{class_my_tcp_server}\index{MyTcpServer@{MyTcpServer}}
+
+
+Класс TCP сервера для обработки клиентских соединений  
+
+
+
+
+{\ttfamily \#include $<$mytcpserver.\+h$>$}
+
+Inheritance diagram for My\+Tcp\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_tcp_server}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_tcp_server_a0ba7316ffe1a26c57fabde9e74b6c8dc}\label{class_my_tcp_server_a0ba7316ffe1a26c57fabde9e74b6c8dc} 
+void {\bfseries slot\+New\+Connection} ()
+\begin{DoxyCompactList}\small\item\em Обработчик нового подключения клиента \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_tcp_server_a54b076d44e0a7948959129fae963d293}{slot\+Client\+Disconnected}} (QTcp\+Socket \texorpdfstring{$\ast$}{*}socket)
+\begin{DoxyCompactList}\small\item\em Обработчик отключения клиента \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_tcp_server_a5992a4855ec84d715a43e6031ac0e1f7}{slot\+Server\+Read}} (QTcp\+Socket \texorpdfstring{$\ast$}{*}socket)
+\begin{DoxyCompactList}\small\item\em Обработчик чтения данных от клиента \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_tcp_server_acf367c4695b4d160c7a2d25c2afaaec4}{My\+Tcp\+Server}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор \doxylink{class_my_tcp_server}{My\+Tcp\+Server}. \end{DoxyCompactList}\item 
+\Hypertarget{class_my_tcp_server_ab39e651ff7c37c152215c02c225e79ef}\label{class_my_tcp_server_ab39e651ff7c37c152215c02c225e79ef} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+My\+Tcp\+Server} ()
+\begin{DoxyCompactList}\small\item\em Деструктор \doxylink{class_my_tcp_server}{My\+Tcp\+Server}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс TCP сервера для обработки клиентских соединений 
+
+Реализует\+:
+\begin{DoxyItemize}
+\item Принятие новых подключений
+\item Чтение данных от клиентов
+\item Выполнение команд регистрации, авторизации и работы с БД 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_my_tcp_server_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_my_tcp_server_acf367c4695b4d160c7a2d25c2afaaec4}\index{MyTcpServer@{MyTcpServer}!MyTcpServer@{MyTcpServer}}
+\index{MyTcpServer@{MyTcpServer}!MyTcpServer@{MyTcpServer}}
+\doxysubsubsection{\texorpdfstring{MyTcpServer()}{MyTcpServer()}}
+{\footnotesize\ttfamily \label{class_my_tcp_server_acf367c4695b4d160c7a2d25c2afaaec4} 
+My\+Tcp\+Server\+::\+My\+Tcp\+Server (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор \doxylink{class_my_tcp_server}{My\+Tcp\+Server}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский QObject \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_my_tcp_server_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_tcp_server_a54b076d44e0a7948959129fae963d293}\index{MyTcpServer@{MyTcpServer}!slotClientDisconnected@{slotClientDisconnected}}
+\index{slotClientDisconnected@{slotClientDisconnected}!MyTcpServer@{MyTcpServer}}
+\doxysubsubsection{\texorpdfstring{slotClientDisconnected}{slotClientDisconnected}}
+{\footnotesize\ttfamily \label{class_my_tcp_server_a54b076d44e0a7948959129fae963d293} 
+void My\+Tcp\+Server\+::slot\+Client\+Disconnected (\begin{DoxyParamCaption}\item[{QTcp\+Socket \texorpdfstring{$\ast$}{*}}]{socket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик отключения клиента 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет отключившегося клиента \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_my_tcp_server_a5992a4855ec84d715a43e6031ac0e1f7}\index{MyTcpServer@{MyTcpServer}!slotServerRead@{slotServerRead}}
+\index{slotServerRead@{slotServerRead}!MyTcpServer@{MyTcpServer}}
+\doxysubsubsection{\texorpdfstring{slotServerRead}{slotServerRead}}
+{\footnotesize\ttfamily \label{class_my_tcp_server_a5992a4855ec84d715a43e6031ac0e1f7} 
+void My\+Tcp\+Server\+::slot\+Server\+Read (\begin{DoxyParamCaption}\item[{QTcp\+Socket \texorpdfstring{$\ast$}{*}}]{socket}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Обработчик чтения данных от клиента 
+
+
+\begin{DoxyParams}{Parameters}
+{\em socket} & Сокет клиента \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mytcpserver_8h}{mytcpserver.\+h}}\item 
+\mbox{\hyperlink{mytcpserver_8cpp}{mytcpserver.\+cpp}}\end{DoxyCompactItemize}

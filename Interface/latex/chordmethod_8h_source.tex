@@ -1,0 +1,43 @@
+\doxysection{chordmethod.\+h}
+\hypertarget{chordmethod_8h_source}{}\label{chordmethod_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHORDMETHOD\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHORDMETHOD\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QPointF>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_chord_method_a5239e97f67ad03942fc4966ebf3495b6}{ChordMethod}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_chord_method_a5239e97f67ad03942fc4966ebf3495b6}{ChordMethod}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_chord_method_a3edd96c85a1caa720197e8998f75dff0}{hasRoot}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{double}(\textcolor{keywordtype}{double})>\&\ function,\ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_chord_method_a1f9645e403e820619efa17b7519d8141}{solve}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{double}(\textcolor{keywordtype}{double})>\&\ function,\ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ epsilon\ =\ 1e-\/6,\ \textcolor{keywordtype}{int}\ maxIterations\ =\ 100);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_chord_method_abf50963a256e90b741e93a01019f1d2f}{getIterationCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ QString\ \mbox{\hyperlink{class_chord_method_a89dfae1afc87d5ef62f48088476a858a}{lastError}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \ \ \ \ QVector<QPointF>\ \mbox{\hyperlink{class_chord_method_a5a13a2c589c4f7f07ff84953763de7fd}{calculateFunctionPoints}}(\textcolor{keyword}{const}\ std::function<\textcolor{keywordtype}{double}(\textcolor{keywordtype}{double})>\&\ function,\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{int}\ pointCount\ =\ 100);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ QVector<QPointF>\ \mbox{\hyperlink{class_chord_method_abf23b4d1d8844f06a83aa0b5ffa39f85}{getIterationHistory}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ QString\ m\_lastError;\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_iterationCount;\ }
+\DoxyCodeLine{00077\ \ \ \ \ QVector<QPointF>\ m\_iterationHistory;\ }
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHORDMETHOD\_H}}
+\DoxyCodeLine{00081\ }
+
+\end{DoxyCode}

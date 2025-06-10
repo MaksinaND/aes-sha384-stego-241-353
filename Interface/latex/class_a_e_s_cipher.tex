@@ -1,0 +1,213 @@
+\doxysection{AESCipher Class Reference}
+\hypertarget{class_a_e_s_cipher}{}\label{class_a_e_s_cipher}\index{AESCipher@{AESCipher}}
+
+
+Класс \doxylink{class_a_e_s_cipher}{AESCipher} предоставляет удобный интерфейс для работы с \doxylink{class_a_e_s}{AES} шифрованием  
+
+
+
+
+{\ttfamily \#include $<$aescipher.\+h$>$}
+
+Inheritance diagram for AESCipher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_e_s_cipher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_e_s_cipher_a13fbbe4e8f25a67b9a83e6cc8dc85b57}{AESCipher}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_a_e_s_cipher}{AESCipher}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_e_s_cipher_a69200e0300bba68844ec0f1146cbd5d1}{set\+Key}} (const QByte\+Array \&key, int key\+Size)
+\begin{DoxyCompactList}\small\item\em Устанавливает ключ шифрования \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_a_e_s_cipher_a111fbd48296aafed174a450c6e4dc2f6}{encrypt}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Шифрует данные \end{DoxyCompactList}\item 
+QByte\+Array \mbox{\hyperlink{class_a_e_s_cipher_aa9d866933b9c9410aa5c2f2d31fc5676}{decrypt}} (const QByte\+Array \&data)
+\begin{DoxyCompactList}\small\item\em Дешифрует данные \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_cipher_acf6994f12ed3bb06991fd58781fd18ed}{encrypt\+To\+Base64}} (const QString \&text)
+\begin{DoxyCompactList}\small\item\em Шифрует текст и возвращает результат в виде Base64. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_cipher_af4e21a121526960ca31950a485adc653}{decrypt\+From\+Base64}} (const QString \&base64)
+\begin{DoxyCompactList}\small\item\em Дешифрует текст из формата Base64. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_cipher_a7a86e89b7506d5e6731a12447dc15b23}{encrypt\+To\+Hex}} (const QString \&text)
+\begin{DoxyCompactList}\small\item\em Шифрует текст и возвращает результат в виде шестнадцатеричной строки \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_cipher_a86a71a21f35c401cfd51c91031abf1b0}{decrypt\+From\+Hex}} (const QString \&hex)
+\begin{DoxyCompactList}\small\item\em Дешифрует текст из шестнадцатеричного формата \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_a_e_s_cipher_a44369cf292320b37ea84f4140eb30edd}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_a_e_s_cipher}{AESCipher} предоставляет удобный интерфейс для работы с \doxylink{class_a_e_s}{AES} шифрованием 
+
+\label{doc-constructors}
+\Hypertarget{class_a_e_s_cipher_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_e_s_cipher_a13fbbe4e8f25a67b9a83e6cc8dc85b57}\index{AESCipher@{AESCipher}!AESCipher@{AESCipher}}
+\index{AESCipher@{AESCipher}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{AESCipher()}{AESCipher()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a13fbbe4e8f25a67b9a83e6cc8dc85b57} 
+AESCipher\+::\+AESCipher (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_a_e_s_cipher}{AESCipher}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_a_e_s_cipher_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_e_s_cipher_aa9d866933b9c9410aa5c2f2d31fc5676}\index{AESCipher@{AESCipher}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{decrypt()}{decrypt()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_aa9d866933b9c9410aa5c2f2d31fc5676} 
+QByte\+Array AESCipher\+::decrypt (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует данные 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для дешифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Дешифрованные данные 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_af4e21a121526960ca31950a485adc653}\index{AESCipher@{AESCipher}!decryptFromBase64@{decryptFromBase64}}
+\index{decryptFromBase64@{decryptFromBase64}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{decryptFromBase64()}{decryptFromBase64()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_af4e21a121526960ca31950a485adc653} 
+QString AESCipher\+::decrypt\+From\+Base64 (\begin{DoxyParamCaption}\item[{const QString \&}]{base64}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует текст из формата Base64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base64} & Текст в формате Base64 для дешифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Дешифрованный текст 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_a86a71a21f35c401cfd51c91031abf1b0}\index{AESCipher@{AESCipher}!decryptFromHex@{decryptFromHex}}
+\index{decryptFromHex@{decryptFromHex}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{decryptFromHex()}{decryptFromHex()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a86a71a21f35c401cfd51c91031abf1b0} 
+QString AESCipher\+::decrypt\+From\+Hex (\begin{DoxyParamCaption}\item[{const QString \&}]{hex}{}\end{DoxyParamCaption})}
+
+
+
+Дешифрует текст из шестнадцатеричного формата 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hex} & Текст в шестнадцатеричном формате для дешифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Дешифрованный текст 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_a111fbd48296aafed174a450c6e4dc2f6}\index{AESCipher@{AESCipher}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a111fbd48296aafed174a450c6e4dc2f6} 
+QByte\+Array AESCipher\+::encrypt (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует данные 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Данные для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованные данные 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_acf6994f12ed3bb06991fd58781fd18ed}\index{AESCipher@{AESCipher}!encryptToBase64@{encryptToBase64}}
+\index{encryptToBase64@{encryptToBase64}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{encryptToBase64()}{encryptToBase64()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_acf6994f12ed3bb06991fd58781fd18ed} 
+QString AESCipher\+::encrypt\+To\+Base64 (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует текст и возвращает результат в виде Base64. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный текст в формате Base64 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_a7a86e89b7506d5e6731a12447dc15b23}\index{AESCipher@{AESCipher}!encryptToHex@{encryptToHex}}
+\index{encryptToHex@{encryptToHex}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{encryptToHex()}{encryptToHex()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a7a86e89b7506d5e6731a12447dc15b23} 
+QString AESCipher\+::encrypt\+To\+Hex (\begin{DoxyParamCaption}\item[{const QString \&}]{text}{}\end{DoxyParamCaption})}
+
+
+
+Шифрует текст и возвращает результат в виде шестнадцатеричной строки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Текст для шифрования \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Зашифрованный текст в шестнадцатеричном формате 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_a44369cf292320b37ea84f4140eb30edd}\index{AESCipher@{AESCipher}!lastError@{lastError}}
+\index{lastError@{lastError}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a44369cf292320b37ea84f4140eb30edd} 
+QString AESCipher\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Текст ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_a_e_s_cipher_a69200e0300bba68844ec0f1146cbd5d1}\index{AESCipher@{AESCipher}!setKey@{setKey}}
+\index{setKey@{setKey}!AESCipher@{AESCipher}}
+\doxysubsubsection{\texorpdfstring{setKey()}{setKey()}}
+{\footnotesize\ttfamily \label{class_a_e_s_cipher_a69200e0300bba68844ec0f1146cbd5d1} 
+bool AESCipher\+::set\+Key (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{key}{, }\item[{int}]{key\+Size}{}\end{DoxyParamCaption})}
+
+
+
+Устанавливает ключ шифрования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Ключ шифрования \\
+\hline
+{\em key\+Size} & Размер ключа (128, 192 или 256 бит) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если ключ установлен успешно, иначе false 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+aescipher.\+h\item 
+aescipher.\+cpp\end{DoxyCompactItemize}

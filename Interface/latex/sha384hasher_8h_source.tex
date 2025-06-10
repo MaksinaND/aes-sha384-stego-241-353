@@ -1,0 +1,54 @@
+\doxysection{sha384hasher.\+h}
+\hypertarget{sha384hasher_8h_source}{}\label{sha384hasher_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SHA384HASHER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SHA384HASHER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QByteArray>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sha384.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_h_a384_hasher_a48562d430847a258dad141bcbd80c1bd}{SHA384Hasher}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_s_h_a384_hasher_a48562d430847a258dad141bcbd80c1bd}{SHA384Hasher}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ QByteArray\ \mbox{\hyperlink{class_s_h_a384_hasher_a7fe73329efa5c239327ee75a2661bd57}{hash}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ QByteArray\ \mbox{\hyperlink{class_s_h_a384_hasher_a4b8af9de39e9baa73927d8f79b954abc}{hashText}}(\textcolor{keyword}{const}\ QString\ \&text);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ QByteArray\ \mbox{\hyperlink{class_s_h_a384_hasher_a258c50a78d293a061c7b0f50d59982a2}{hashFile}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_aae0826b1702685a0ee751301fa8b37fd}{hashToHex}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_a88095db0c9370307a5206685c94f44cb}{hashTextToHex}}(\textcolor{keyword}{const}\ QString\ \&text);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_ac6befa7cd433bca9951ea327b1c944cc}{hashFileToHex}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_aeba195fa4cc7be0cc289071dda0819f0}{hashToBase64}}(\textcolor{keyword}{const}\ QByteArray\ \&data);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_a38655cbdd769844531970359d3dfa89c}{hashTextToBase64}}(\textcolor{keyword}{const}\ QString\ \&text);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_a3d9dc47296d157f2a9ac388ee9d0e9a9}{hashFileToBase64}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_h_a384_hasher_a84a8dbe70449a66e3238b24e0a5707bb}{verify}}(\textcolor{keyword}{const}\ QByteArray\ \&data,\ \textcolor{keyword}{const}\ QByteArray\ \&expectedHash);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_h_a384_hasher_aa355e48412155c78bb9591872a26262b}{verifyText}}(\textcolor{keyword}{const}\ QString\ \&text,\ \textcolor{keyword}{const}\ QString\ \&expectedHash);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_h_a384_hasher_a244e74329c607faf77343b747ed4348d}{verifyFile}}(\textcolor{keyword}{const}\ QString\ \&filePath,\ \textcolor{keyword}{const}\ QString\ \&expectedHash);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00115\ \ \ \ \ QString\ \mbox{\hyperlink{class_s_h_a384_hasher_af44903709eeea48a6827fcc70026ad6d}{lastError}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{class_s_h_a384}{SHA384}}\ m\_sha384;}
+\DoxyCodeLine{00119\ \ \ \ \ QString\ m\_lastError;}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SHA384HASHER\_H}}
+\DoxyCodeLine{00123\ }
+
+\end{DoxyCode}

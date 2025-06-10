@@ -1,0 +1,1429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Многофункциональное приложение</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2E3440;
+color: #D8DEE9; </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: 1px solid #4C566A;
+    background-color: #2E3440;
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    padding: 8px 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #4C566A;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #4C566A;
+    color: #ECEFF4;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #434C5E;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabSteganography">
+       <attribute name="title">
+        <string>Стеганография</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="groupBoxEmbed">
+              <property name="title">
+               <string>Внедрение сообщения</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLineEdit" name="editEmbedMessage">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Сообщение для внедрения</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnSelectImageEmbed">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Выбрать изображение</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnEmbed">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Внедрить</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnSaveImage">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Сохранить изображение</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxExtract">
+              <property name="title">
+               <string>Извлечение сообщения</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QPushButton" name="btnSelectImageExtract">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Выбрать изображение</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnExtract">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Извлечь</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="labelImage">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Изображение будет отображаться здесь</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textOutput">
+              <property name="styleSheet">
+               <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>Результаты будут отображаться здесь</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabChordMethod">
+       <attribute name="title">
+        <string>Метод хорд</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QGroupBox" name="groupBoxFunction">
+              <property name="title">
+               <string>Функция</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QComboBox" name="comboFunction">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>x^2 - 4</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>sin(x) - 0.5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>x^3 - 2*x - 5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>exp(x) - 3</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>log(x) - 1</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxInterval">
+              <property name="title">
+               <string>Интервал</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelA">
+                 <property name="text">
+                  <string>a:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="editA">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelB">
+                 <property name="text">
+                  <string>b:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="editB">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxParams">
+              <property name="title">
+               <string>Параметры</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_2">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelEpsilon">
+                 <property name="text">
+                  <string>Точность:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="editEpsilon">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>0.0001</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelMaxIter">
+                 <property name="text">
+                  <string>Макс. итераций:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="editMaxIter">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>100</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnSolve">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+              </property>
+              <property name="text">
+               <string>Найти корень</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnClear">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #BF616A;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #CF717A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Очистить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxResult">
+              <property name="title">
+               <string>Результат</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_3">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelRootText">
+                 <property name="text">
+                  <string>Корень:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="labelRoot">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #A3BE8C;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelFunctionValueText">
+                 <property name="text">
+                  <string>f(x):</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLabel" name="labelFunctionValue">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #A3BE8C;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="labelIterationsText">
+                 <property name="text">
+                  <string>Итераций:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="labelIterations">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #A3BE8C;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>-</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="labelPlot">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+}</string>
+              </property>
+              <property name="text">
+               <string>График функции</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textChordOutput">
+              <property name="styleSheet">
+               <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>Результаты будут отображаться здесь</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabAES">
+       <attribute name="title">
+        <string>AES</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QGroupBox" name="groupBoxAESSettings">
+              <property name="title">
+               <string>Настройки AES</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelKeyAES">
+                 <property name="text">
+                  <string>Ключ:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="editKeyAES">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="echoMode">
+                  <enum>QLineEdit::Password</enum>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Введите ключ шифрования</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelKeySizeAES">
+                 <property name="text">
+                  <string>Размер ключа:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QComboBox" name="comboKeySizeAES">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>128 бит</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>192 бит</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>256 бит</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="labelOutputFormatAES">
+                 <property name="text">
+                  <string>Формат вывода:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="comboOutputFormatAES">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Hex</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Base64</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelKeySize">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #88C0D0;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Размер ключа: 128 бит (16 байт)</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnEncrypt">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+              </property>
+              <property name="text">
+               <string>Зашифровать</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnDecrypt">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #EBCB8B;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #FBDB9B;
+}</string>
+              </property>
+              <property name="text">
+               <string>Дешифровать</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnClearAES">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #BF616A;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #CF717A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Очистить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCopyAESResult">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+              </property>
+              <property name="text">
+               <string>Копировать результат</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelAESStatus">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #88C0D0;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Статус: Готов</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <widget class="QGroupBox" name="groupBoxPlainText">
+              <property name="title">
+               <string>Исходный текст</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_14">
+               <item>
+                <widget class="QTextEdit" name="editPlainTextAES">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Введите текст для шифрования</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxCipherText">
+              <property name="title">
+               <string>Зашифрованный текст</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_15">
+               <item>
+                <widget class="QTextEdit" name="editCipherTextAES">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Зашифрованный текст будет отображаться здесь</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabSHA384">
+       <attribute name="title">
+        <string>SHA-384</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_16">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_17">
+            <item>
+             <widget class="QGroupBox" name="groupBoxSHA384Settings">
+              <property name="title">
+               <string>Настройки SHA-384</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_5">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelOutputFormatSHA384">
+                 <property name="text">
+                  <string>Формат вывода:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="comboOutputFormatSHA384">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Hex</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Base64</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCalculateHash">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+              </property>
+              <property name="text">
+               <string>Вычислить хеш</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnClearSHA384">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #BF616A;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #CF717A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Очистить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnCopyHash">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+              </property>
+              <property name="text">
+               <string>Копировать хеш</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxFileHash">
+              <property name="title">
+               <string>Хеширование файла</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_18">
+               <item>
+                <widget class="QPushButton" name="btnSelectFile">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Выбрать файл</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelSelectedFile">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Файл не выбран</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnCalculateFileHash">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Вычислить хеш файла</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxVerify">
+              <property name="title">
+               <string>Проверка хеша</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_19">
+               <item>
+                <widget class="QLineEdit" name="editExpectedHash">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Введите ожидаемый хеш для проверки</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnVerifyHash">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #EBCB8B;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #FBDB9B;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Проверить хеш</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="labelVerifyResult">
+                 <property name="styleSheet">
+                  <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Результат проверки</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelSHA384Status">
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    color: #88C0D0;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Статус: Готов</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_20">
+            <item>
+             <widget class="QGroupBox" name="groupBoxInputText">
+              <property name="title">
+               <string>Входной текст</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_21">
+               <item>
+                <widget class="QTextEdit" name="editInputTextSHA384">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Введите текст для хеширования</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxHashResult">
+              <property name="title">
+               <string>Результат хеширования</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_22">
+               <item>
+                <widget class="QLineEdit" name="editHashResult">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Результат хеширования будет отображаться здесь</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxInfo">
+              <property name="title">
+               <string>Информация о SHA-384</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_23">
+               <item>
+                <widget class="QTextBrowser" name="textBrowserInfo">
+                 <property name="styleSheet">
+                  <string notr="true">QTextBrowser {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+                 </property>
+                 <property name="html">
+                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; color:#88c0d0;&quot;&gt;SHA-384&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - это криптографическая хеш-функция из семейства SHA-2, разработанная АНБ США.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Основные характеристики:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Размер выходного хеша: 384 бита (48 байт)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Внутренний размер блока: 1024 бита&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Основан на SHA-512 с другими начальными значениями&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Применение:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Проверка целостности данных&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Цифровые подписи&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Аутентификация&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;- Хранение паролей&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

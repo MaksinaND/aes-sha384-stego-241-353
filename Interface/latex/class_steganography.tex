@@ -1,0 +1,138 @@
+\doxysection{Steganography Class Reference}
+\hypertarget{class_steganography}{}\label{class_steganography}\index{Steganography@{Steganography}}
+
+
+Класс \doxylink{class_steganography}{Steganography} предоставляет функции для внедрения и извлечения сообщений из изображений  
+
+
+
+
+{\ttfamily \#include $<$steganography.\+h$>$}
+
+Inheritance diagram for Steganography\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_steganography}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_steganography_a09e528c2e8b4356ad06f1a5566f6b33e}{Steganography}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор класса \doxylink{class_steganography}{Steganography}. \end{DoxyCompactList}\item 
+\Hypertarget{class_steganography_a307182616cc20df3d658d9d276f41782}\label{class_steganography_a307182616cc20df3d658d9d276f41782} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Steganography} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \doxylink{class_steganography}{Steganography}. \end{DoxyCompactList}\item 
+QImage \mbox{\hyperlink{class_steganography_a7dff9dea6fd7c1eb86a3a1f1b5dba43d}{embed\+Message}} (const QImage \&image, const QString \&message)
+\begin{DoxyCompactList}\small\item\em Внедряет сообщение в изображение \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_steganography_a38c7ba77268655dc5c2fbc4491fbc98f}{extract\+Message}} (const QImage \&image)
+\begin{DoxyCompactList}\small\item\em Извлекает сообщение из изображения \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_steganography_a643e25bd48a7218159b616f962a37935}{has\+Embedded\+Message}} (const QImage \&image)
+\begin{DoxyCompactList}\small\item\em Проверяет, содержит ли изображение внедренное сообщение \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_steganography_a54aed0410901fb17c0c429df3981ae9f}{last\+Error}} () const
+\begin{DoxyCompactList}\small\item\em Возвращает последнюю ошибку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс \doxylink{class_steganography}{Steganography} предоставляет функции для внедрения и извлечения сообщений из изображений 
+
+Класс использует метод LSB (Least Significant Bit) для внедрения сообщений в изображения. 
+
+\label{doc-constructors}
+\Hypertarget{class_steganography_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_steganography_a09e528c2e8b4356ad06f1a5566f6b33e}\index{Steganography@{Steganography}!Steganography@{Steganography}}
+\index{Steganography@{Steganography}!Steganography@{Steganography}}
+\doxysubsubsection{\texorpdfstring{Steganography()}{Steganography()}}
+{\footnotesize\ttfamily \label{class_steganography_a09e528c2e8b4356ad06f1a5566f6b33e} 
+Steganography\+::\+Steganography (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор класса \doxylink{class_steganography}{Steganography}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_steganography_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_steganography_a7dff9dea6fd7c1eb86a3a1f1b5dba43d}\index{Steganography@{Steganography}!embedMessage@{embedMessage}}
+\index{embedMessage@{embedMessage}!Steganography@{Steganography}}
+\doxysubsubsection{\texorpdfstring{embedMessage()}{embedMessage()}}
+{\footnotesize\ttfamily \label{class_steganography_a7dff9dea6fd7c1eb86a3a1f1b5dba43d} 
+QImage Steganography\+::embed\+Message (\begin{DoxyParamCaption}\item[{const QImage \&}]{image}{, }\item[{const QString \&}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Внедряет сообщение в изображение 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Исходное изображение \\
+\hline
+{\em message} & Сообщение для внедрения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Изображение с внедренным сообщением или пустое изображение в случае ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_steganography_a38c7ba77268655dc5c2fbc4491fbc98f}\index{Steganography@{Steganography}!extractMessage@{extractMessage}}
+\index{extractMessage@{extractMessage}!Steganography@{Steganography}}
+\doxysubsubsection{\texorpdfstring{extractMessage()}{extractMessage()}}
+{\footnotesize\ttfamily \label{class_steganography_a38c7ba77268655dc5c2fbc4491fbc98f} 
+QString Steganography\+::extract\+Message (\begin{DoxyParamCaption}\item[{const QImage \&}]{image}{}\end{DoxyParamCaption})}
+
+
+
+Извлекает сообщение из изображения 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Изображение с внедренным сообщением \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Извлеченное сообщение или пустая строка в случае ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_steganography_a643e25bd48a7218159b616f962a37935}\index{Steganography@{Steganography}!hasEmbeddedMessage@{hasEmbeddedMessage}}
+\index{hasEmbeddedMessage@{hasEmbeddedMessage}!Steganography@{Steganography}}
+\doxysubsubsection{\texorpdfstring{hasEmbeddedMessage()}{hasEmbeddedMessage()}}
+{\footnotesize\ttfamily \label{class_steganography_a643e25bd48a7218159b616f962a37935} 
+bool Steganography\+::has\+Embedded\+Message (\begin{DoxyParamCaption}\item[{const QImage \&}]{image}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, содержит ли изображение внедренное сообщение 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Изображение для проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если изображение содержит внедренное сообщение, иначе false 
+\end{DoxyReturn}
+\Hypertarget{class_steganography_a54aed0410901fb17c0c429df3981ae9f}\index{Steganography@{Steganography}!lastError@{lastError}}
+\index{lastError@{lastError}!Steganography@{Steganography}}
+\doxysubsubsection{\texorpdfstring{lastError()}{lastError()}}
+{\footnotesize\ttfamily \label{class_steganography_a54aed0410901fb17c0c429df3981ae9f} 
+QString Steganography\+::last\+Error (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Возвращает последнюю ошибку 
+
+\begin{DoxyReturn}{Returns}
+Строка с описанием последней ошибки 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{steganography_8h}{steganography.\+h}}\item 
+\mbox{\hyperlink{steganography_8cpp}{steganography.\+cpp}}\end{DoxyCompactItemize}

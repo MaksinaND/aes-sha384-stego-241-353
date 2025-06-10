@@ -1,0 +1,26 @@
+\doxysection{databasemanager.\+h}
+\hypertarget{databasemanager_8h_source}{}\label{databasemanager_8h_source}\mbox{\hyperlink{databasemanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DATABASEMANAGER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DATABASEMANAGER\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }DatabaseManager\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ DatabaseManager*\ \mbox{\hyperlink{class_database_manager_adc77584b498f23cb33c9fc2d0422a73f}{getInstance}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ QSqlDatabase\ \mbox{\hyperlink{class_database_manager_a4c1124bbf21d49013912fedac7407ce8}{getDatabase}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{static}\ DatabaseManager*\ instance;\ }
+\DoxyCodeLine{00038\ \ \ \ \ QSqlDatabase\ db;\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ DatabaseManager();}
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DATABASEMANAGER\_H}}
+
+\end{DoxyCode}

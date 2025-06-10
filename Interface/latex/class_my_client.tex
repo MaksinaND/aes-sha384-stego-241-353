@@ -1,0 +1,80 @@
+\doxysection{My\+Client Class Reference}
+\hypertarget{class_my_client}{}\label{class_my_client}\index{MyClient@{MyClient}}
+
+
+Класс TCP клиента для работы в GUI приложении  
+
+
+
+
+{\ttfamily \#include $<$myclient.\+h$>$}
+
+Inheritance diagram for My\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_client}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}{response\+Received}} (const QString \&message)
+\begin{DoxyCompactList}\small\item\em Сигнал получения ответа от сервера \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_client_a56743a539a6bf7516a04890b96a785bf}\label{class_my_client_a56743a539a6bf7516a04890b96a785bf} 
+void {\bfseries connect\+To\+Server} ()
+\item 
+\Hypertarget{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac}\label{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac} 
+void {\bfseries send\+Command} (const QString \&command)
+\item 
+\Hypertarget{class_my_client_a940c4bc94d8fccff1a2a38f234caea28}\label{class_my_client_a940c4bc94d8fccff1a2a38f234caea28} 
+QTcp\+Socket \texorpdfstring{$\ast$}{*} {\bfseries get\+Socket} ()
+\item 
+\Hypertarget{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8}\label{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8} 
+QString {\bfseries get\+Last\+Response} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73}\label{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73} 
+static \mbox{\hyperlink{class_my_client}{My\+Client}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Instance} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс TCP клиента для работы в GUI приложении 
+
+Реализует\+:
+\begin{DoxyItemize}
+\item Подключение к серверу
+\item Отправку команд
+\item Чтение ответа и генерацию сигнала в интерфейс
+\item Реализацию паттерна Singleton 
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{class_my_client_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}\index{MyClient@{MyClient}!responseReceived@{responseReceived}}
+\index{responseReceived@{responseReceived}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{responseReceived}{responseReceived}}
+{\footnotesize\ttfamily \label{class_my_client_aeae809f7c4e5772c2aa59d36f4957467} 
+void My\+Client\+::response\+Received (\begin{DoxyParamCaption}\item[{const QString \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Сигнал получения ответа от сервера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Текст ответа от сервера \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+myclient.\+h\item 
+myclient.\+cpp\end{DoxyCompactItemize}

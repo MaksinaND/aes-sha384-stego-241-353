@@ -1,0 +1,39 @@
+\doxysection{myclient.\+h}
+\hypertarget{myclient_8h_source}{}\label{myclient_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }MyClient\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ signals:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}{responseReceived}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ MyClient*\ getInstance();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ connectToServer();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ sendCommand(\textcolor{keyword}{const}\ QString\&\ command);}
+\DoxyCodeLine{00031\ \ \ \ \ QTcpSocket*\ getSocket();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Новый\ метод:\ получить\ последний\ ответ\ от\ сервера}}
+\DoxyCodeLine{00034\ \ \ \ \ QString\ getLastResponse()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnected();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ onReadyRead();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ onDisconnected();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{explicit}\ MyClient(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ QTcpSocket*\ socket;}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ MyClient*\ instance;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ QString\ lastResponse;\ \ \textcolor{comment}{//\ 🆕\ переменная\ для\ хранения\ последнего\ ответа}}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}
