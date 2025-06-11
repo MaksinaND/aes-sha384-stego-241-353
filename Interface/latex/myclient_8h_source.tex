@@ -1,0 +1,39 @@
+\doxysection{myclient.\+h}
+\hypertarget{myclient_8h_source}{}\label{myclient_8h_source}\mbox{\hyperlink{myclient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}{MyClient}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ signals:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_aeae809f7c4e5772c2aa59d36f4957467}{responseReceived}}(\textcolor{keyword}{const}\ QString\&\ message);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}{MyClient}}*\ \mbox{\hyperlink{class_my_client_a4ef5e0de12bb8c5c3e4387a4e72c7d73}{getInstance}}();}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_a56743a539a6bf7516a04890b96a785bf}{connectToServer}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_a12f5ed1eb46c62fc95fbf0acf33480ac}{sendCommand}}(\textcolor{keyword}{const}\ QString\&\ command);}
+\DoxyCodeLine{00031\ \ \ \ \ QTcpSocket*\ \mbox{\hyperlink{class_my_client_a940c4bc94d8fccff1a2a38f234caea28}{getSocket}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Новый\ метод:\ получить\ последний\ ответ\ от\ сервера}}
+\DoxyCodeLine{00034\ \ \ \ \ QString\ \mbox{\hyperlink{class_my_client_a9f1b625528cc6c1e5680eeafbcf705c8}{getLastResponse}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_a355d2cb56cd4c8d23b5366a836fe5b9e}{onConnected}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_a773e11907cd8be63c54321e34c04feb4}{onReadyRead}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_my_client_a6a05e6d4cdc6055a08f4db8125bb5a07}{onDisconnected}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}{MyClient}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ QTcpSocket*\ \mbox{\hyperlink{class_my_client_a7ee30df5c2e5f32a59045f5f9be61400}{socket}};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_my_client_af3b600b783c8b1fa05efc9e9e2030296}{MyClient}}*\ \mbox{\hyperlink{class_my_client_aeb0decd421c263d343b7d69458aa900e}{instance}};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ QString\ \mbox{\hyperlink{class_my_client_a6f43f7927db7b1309b677145c354879f}{lastResponse}};\ \ \textcolor{comment}{//\ 🆕\ переменная\ для\ хранения\ последнего\ ответа}}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}
