@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Многофункциональное приложение</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2E3440;
+color: #D8DEE9; </string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">QTabWidget::pane {
+    border: 1px solid #4C566A;
+    background-color: #2E3440;
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    padding: 8px 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #4C566A;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #4C566A;
+    color: #ECEFF4;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #434C5E;
+}</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabSteganography">
+       <attribute name="title">
+        <string>Стеганография</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="groupBoxEmbed">
+              <property name="title">
+               <string>Внедрение сообщения</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_5">
+               <item>
+                <widget class="QLineEdit" name="editEmbedMessage">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Сообщение для внедрения</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnSelectImageEmbed">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Выбрать изображение</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnEmbed">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Внедрить</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnSaveImage">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Сохранить изображение</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxExtract">
+              <property name="title">
+               <string>Извлечение сообщения</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_6">
+               <item>
+                <widget class="QPushButton" name="btnSelectImageExtract">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #5E81AC;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #81A1C1;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Выбрать изображение</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btnExtract">
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Извлечь</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="labelImage">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>300</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Изображение будет отображаться здесь</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="textOutput">
+              <property name="styleSheet">
+               <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    padding: 5px;
+}</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>Результаты будут отображаться здесь</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabChordMethod">
+       <attribute name="title">
+        <string>Метод хорд</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QGroupBox" name="groupBoxFunction">
+              <property name="title">
+               <string>Функция</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
+                <widget class="QComboBox" name="comboFunction">
+                 <property name="styleSheet">
+                  <string notr="true">QComboBox {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>x^2 - 4</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>sin(x) - 0.5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>x^3 - 2*x - 5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>exp(x) - 3</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>log(x) - 1</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxInterval">
+              <property name="title">
+               <string>Интервал</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelA">
+                 <property name="text">
+                  <string>a:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="editA">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelB">
+                 <property name="text">
+                  <string>b:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="editB">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxParams">
+              <property name="title">
+               <string>Параметры</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout_2">
+               <item row="0" column="0">
+                <widget class="QLabel" name="labelEpsilon">
+                 <property name="text">
+                  <string>Точность:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="editEpsilon">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>0.0001</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="labelMaxIter">
+                 <property name="text">
+                  <string>Макс. итераций:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="editMaxIter">
+                 <property name="styleSheet">
+                  <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>100</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnSolve">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+              </property>
+              <property name="text">
+               <string>Найти корень</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btnClear">
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    background-color: #BF616A;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #CF717A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Очистить</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBoxResult">
+              <property name="title">
+               <string>Результат</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_10">
+               <item>
+                <widget class="QTextEdit" name="textResult">
+                 <property name="styleSheet">
+                  <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+                 </property>
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Результат вычислений</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGraphicsView" name="graphicsView">
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QGraphicsView {
+    background-color: #3B4252;
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabSHA384">
+       <attribute name="title">
+        <string>SHA384</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QGroupBox" name="groupBoxSHA384">
+          <property name="title">
+           <string>Хеширование SHA384</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QTextEdit" name="editSha384Data">
+             <property name="styleSheet">
+              <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Введите данные для хеширования</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnHashSha384">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+             </property>
+             <property name="text">
+              <string>Вычислить SHA384 хеш</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="editSha384Result">
+             <property name="styleSheet">
+              <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="placeholderText">
+              <string>Результат хеширования</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabAES">
+       <attribute name="title">
+        <string>AES</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QGroupBox" name="groupBoxAES">
+          <property name="title">
+           <string>AES Шифрование/Дешифрование</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QGroupBox {
+    border: 1px solid #4C566A;
+    border-radius: 5px;
+    margin-top: 1ex;
+    font-weight: bold;
+    color: #88C0D0;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 5px;
+}</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <item>
+            <widget class="QLineEdit" name="editAesKey">
+             <property name="styleSheet">
+              <string notr="true">QLineEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Введите ключ (16, 24 или 32 байта)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="editAesPlaintext">
+             <property name="styleSheet">
+              <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Введите открытый текст</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnEncryptAes">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+             </property>
+             <property name="text">
+              <string>Зашифровать</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="editAesCiphertext">
+             <property name="styleSheet">
+              <string notr="true">QTextEdit {
+    background-color: #3B4252;
+    color: #D8DEE9;
+    border: 1px solid #4C566A;
+    border-radius: 4px;
+    padding: 4px;
+}</string>
+             </property>
+             <property name="placeholderText">
+              <string>Введите зашифрованный текст</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btnDecryptAes">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #A3BE8C;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+QPushButton:hover {
+    background-color: #B9D39C;
+}</string>
+             </property>
+             <property name="text">
+              <string>Расшифровать</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabEmpty">
+       <attribute name="title">
+        <string>Пустая вкладка</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="labelEmpty">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #D8DEE9;
+    font-size: 16pt;
+    font-weight: bold;
+}</string>
+          </property>
+          <property name="text">
+           <string>Пустая вкладка для будущего расширения</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+
+
